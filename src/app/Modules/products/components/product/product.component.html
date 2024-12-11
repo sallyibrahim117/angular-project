@@ -1,0 +1,15 @@
+<div class="card h-100"  [routerLink]="['/products/productDetails',data.id]">
+  <div class="card-img">
+    <img [src]="data.image" class="card-img-top" height="200" alt="..." />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title fw-bold">{{ data.title }}</h5>
+    <p class="card-text descstyle">{{ data.description }}</p>
+    <div class="d-flex justify-content-between">
+      <button type="button" class="btn btn-success" (click)="add($event)">Add To Card</button>
+      <button type="button" class="btn btn-outline-danger">
+        {{ data.price | currency : "EGP" }}
+      </button>
+    </div>
+  </div>
+</div>

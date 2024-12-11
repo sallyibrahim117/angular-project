@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <!-- <div class="col-6 col-12">
+      <div class="image">
+        <img src="..." class="w-100" alt="">
+      </div>
+    </div> -->
+    <div class="col-lg-3">
+      <div class="d-flex justify-content- flex-column">
+        <h4 class="fw-normal">Create an account</h4>
+        <small class="mb-1 details">Enter your details below</small>
+        <form id="signup" [formGroup]="myForm">
+          <div class="mt-4">
+
+            <input type="text" name="name" id="mame" placeholder="Name"
+             class="form-control" formControlName="name"
+             [class.is-invalid]="
+             formControlls['title'].invalid && formControlls['title'].touched
+           " />
+          </div>
+
+          <div class="">
+
+            <input
+              type="email"
+              class="form-control "
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email or Phone Number"
+            />
+
+          </div>
+
+          <div>
+
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+              placeholder="password"
+            />
+          </div>
+
+          <div class="w-100">
+            <button
+              type="submit"
+              class="btn btn-danger w-100 mt-2 text-capitalize"
+            >
+              create account
+            </button>
+            <button type="button" class="details btn btn-outline-secondary w-100 mt-3">
+              Sign up with Google
+            </button>
+          </div>
+          <div class="mt-2 d-flex justify-content-between px-4">
+            <small>Already have account?</small>
+            <a href="" class="text-dark">log in</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

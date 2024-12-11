@@ -1,0 +1,16 @@
+.card{
+.card-img{
+  margin: auto;
+  object-fit: cover;
+
+}
+  .descstyle{
+    overflow: hidden;
+    display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: rgb(70, 62, 62);
+  }
+}
+

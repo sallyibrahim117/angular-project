@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-between">
+  <h4>All Products</h4>
+  <button type="button" class="btn btn-success"
+ [routerLink]="['/products/addproduct']">Add product</button>
+</div>
+<hr />
+
+<app-select-menu
+  [data]="categories"
+  [title]="'Categories'"
+  (selectedData)="filterCategory($event)"
+></app-select-menu>
+<div class="row gy-3 mt-4" *ngIf="!loading">
+  <ng-container *ngFor="let item of product">
+    <div class="col-lg-3 col-md-6 col-12">
+      <!-- <div class="card h-100">
+        <div class="card-img">
+          <img [src]="item.image" class="card-img-top" alt="..." />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold bg-secondary">{{ item.title }}</h5>
+          <p class="card-text descstyle">{{ item.description }}</p>
+          <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-success">Add To Card</button>
+            <button type="button" class="btn btn-outline-danger">
+              {{ item.price | currency : "EGP" }}
+            </button>
+          </div>
+        </div>
+      </div> -->
+      <app-product [data]="item" (item)="addTocart($event)"></app-product>
+    </div>
+  </ng-container>
+</div>
+<div class="text-center" *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>

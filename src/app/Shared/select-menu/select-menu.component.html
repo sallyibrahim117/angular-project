@@ -1,0 +1,10 @@
+<label class="text-danger fw-bold">{{title}}:</label>
+<select class="form-select mt-2 " aria-label="Default select example" (change)="detectChange($event)" >
+  <option selected>Open menu</option>
+  <ng-container *ngFor="let item of data">
+
+    <option [value]="item">{{item}}</option>
+  </ng-container>
+
+
+</select>

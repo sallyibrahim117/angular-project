@@ -1,0 +1,50 @@
+<select class="form-select" aria-label="Default select example" (change)="filterCategory($event)">
+  <option selected>Open menu</option>
+  <ng-container *ngFor="let item of myCategory">
+
+    <option [value]="item">{{item}}</option>
+  </ng-container>
+
+
+</select>
+
+<div class="row gy-3 mt-4" *ngIf="!loading">
+  <ng-container *ngFor="let item of myCategory">
+    <div class="col-lg-3 col-md-6 col-12">
+
+
+      <div class="card">
+        <div class="card-img ">
+
+          <img [src]="item.image" class="card-img-top w-100" alt="..." />
+        </div>
+        <div class="card-body">
+          <h5 class="card-title fw-bold bg-secondary">{{ item.title }}</h5>
+          <p class="card-text descstyle ">{{ item.description }}</p>
+          <div class="d-flex justify-content-between">
+            <button type="button" class="btn btn-success ">Add To Card</button>
+            <button type="button" class="btn btn-outline-danger"> {{ item.price | currency:"EGP" }}</button>
+          </div>
+        </div>
+
+        <!-- <ul class="list-group list-group-flush">
+          <li class="list-group-item text-primary">
+            Name: {{ item.category }}
+          </li>
+          <li class="list-group-item text-danger fw-bold">
+            Price: {{ item.price | currency }}
+          </li>
+        </ul> -->
+        <!-- <div class="card-body">
+          <a
+            class="card-link text-primary"
+            [routerLink]="['/products/productDetails', item.id]"
+            >Show Details</a
+          >
+          <a class="card-link text-danger">Delete</a>
+        </div> -->
+      </div>
+    </div>
+  </ng-container>
+</div>
+<!-- <app-spinner></app-spinner> -->
