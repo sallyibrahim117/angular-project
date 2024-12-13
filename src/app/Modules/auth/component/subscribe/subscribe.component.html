@@ -1,0 +1,50 @@
+<div class="container ">
+<div class="w-100 h-100 align-items-center justify-content-center d-flex flex-column">
+    <h3 class="text-uppercase fw-bold title">subscribe</h3>
+    <h4 class="fw-normal mt-2">Get connected to our insights</h4>
+
+    <form action="" class="mt-2 w-100 px-5 mt-2" [formGroup]="myForm">
+<div class="row d-flex">
+<div class="col-10">
+
+  <input type="email" placeholder="Enter your email" class="w-100 email form-control"
+
+  formControlName="email"
+  [class.is-invalid]="
+ formControlls['email'].invalid && formControlls['email'].touched
+
+ "
+  >
+ <ng-container
+  *ngIf="
+  formControlls['email'].invalid &&
+  formControlls['email'].touched
+"
+>
+<small
+  class="text-danger"
+*ngIf="formControlls['email'].invalid && formControlls['email'].touched&& formControlls['errors']"
+
+  >Email is required
+</small>
+<small
+class="text-danger"
+*ngIf="formControlls['email'].errors['email']"
+>email not valid it  must be  contains @
+</small>
+ </ng-container>
+
+</div>
+<div class="col-2">
+<div class=" w-100 buton d-flex justify-content-center align-items-center">
+
+  <button class="btn btn-success  ">subscribe</button>
+</div>
+</div>
+</div>
+    </form>
+
+</div>
+  </div>
+
+

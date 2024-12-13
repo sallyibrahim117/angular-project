@@ -1,0 +1,28 @@
+
+
+.container{
+height: 100vh !important;
+background-color: #eceaea !important;
+
+  .title{
+    letter-spacing: 3px !important;
+    }
+    .email{
+      // height:60px !important;
+      padding: 13px;
+font-size: 20px;
+border-radius: 0px;
+
+    }
+.buton{
+margin-left: -22px;
+}
+    button{
+      // height:100px !important;
+      border-radius: 0px;
+      text-transform: uppercase !important;
+      font-size: 25px;
+      padding-bottom: 11px;
+
+    }
+}
