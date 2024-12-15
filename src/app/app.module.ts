@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +28,7 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
+
   ],
   providers: [
 

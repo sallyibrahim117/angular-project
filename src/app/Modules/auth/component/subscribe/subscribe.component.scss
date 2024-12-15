@@ -1,28 +1,20 @@
 
 
-.container{
-height: 100vh !important;
-background-color: #eceaea !important;
-
-  .title{
-    letter-spacing: 3px !important;
-    }
-    .email{
-      // height:60px !important;
-      padding: 13px;
-font-size: 20px;
-border-radius: 0px;
-
-    }
-.buton{
-margin-left: -22px;
+#forgetPass input{
+  border: 0;
+  width: 100%;
+  padding:5 10;
+  margin: 20px 0;
+  box-sizing: border-box;
+font-size: 13px;
+border-radius: 0px !important;
+  background: transparent;
+  border-bottom: 1px solid rgb(179, 171, 171);
 }
-    button{
-      // height:100px !important;
-      border-radius: 0px;
-      text-transform: uppercase !important;
-      font-size: 25px;
-      padding-bottom: 11px;
-
-    }
+.details{
+  color: black;
 }
+.is-invalid{
+  border-bottom: 1px solid red !important;
+}
+

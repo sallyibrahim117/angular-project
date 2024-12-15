@@ -1,3 +1,4 @@
+import { OtpVerifyComponent } from './component/otp-verify/otp-verify.component';
 import { SubscribeComponent } from './component/subscribe/subscribe.component';
 import { LoginComponent } from './component/login/login.component';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,7 @@ children:[
     {path:"signup",component:SignupComponent},
     {path:"login",component:LoginComponent},
     {path:"subscribe",component:SubscribeComponent},
+    {path:"otpVerification",component:OtpVerifyComponent},
 
 ]}];
 
