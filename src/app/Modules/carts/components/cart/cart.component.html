@@ -1,9 +1,8 @@
-<p>cart works!</p>
-{{carts|json}}
-<section class="h-100 h-custom" style="background-color: #d2c9ff;">
+
+
+<section class="h-100 h-custom">
   <div class="container py-5 h-100">
     <div class="row gy-3 d-flex justify-content-center align-items-center h-100">
-      <ng-container *ngFor="let item of carts">
 
       <div class="col-12">
         <div class="card card-registration card-registration-2" style="border-radius: 15px;">
@@ -16,12 +15,13 @@
                     <h6 class="mb-0 text-muted">{{carts.length}} items</h6>
                   </div>
                   <hr class="my-4">
+                  <ng-container *ngFor="let item of carts">
 
                   <div class="row mb-4 d-flex justify-content-between align-items-center">
                     <div class="col-md-2 col-lg-2 col-xl-2">
                       <img
                       [src]="item.image"
-                      class="img-fluid rounded-3" alt="Cotton T-shirt">
+                      class="img-fluid rounded-3" width="100" alt="Cotton T-shirt">
                       </div>
                     <div class="col-md-3 col-lg-3 col-xl-3">
                       <h6 class="text-muted">{{item.title}}</h6>
@@ -34,7 +34,7 @@
                         <i class="fas fa-minus"></i>
                       </button>
 
-                      <input id="form1" min="0" name="quantity" value="1" type="number"
+                      <input id="form1" min="0" name="quantity" [(ngModel)]="item.count" type="number"
                         class="form-control form-control-sm" />
 
                       <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2">
@@ -45,7 +45,7 @@
                       </button>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                      <h6 class="mb-0">{{item.price | currency}}</h6>
+                      <h6 class="mb-0">{{item.price*item.count | currency}}</h6>
                     </div>
                     <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                       <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
@@ -53,13 +53,37 @@
                   </div>
 
                   <hr class="my-4">
+                  </ng-container>
 
                   </div></div>
             </div>
           </div>
         </div>
       </div>
-    </ng-container>
+      <div>
+
+        <button type="button" class="btn btn-outline-secondary text-capitalize"
+        [routerLink]="['/products/all-product']">return to shop</button>
+      </div>
+
+<div>
+<div class="col-6">
+  <div class="card cardtotal d-flex justify-content-end  p-4">
+    <h5 class="text-capitalize">card total</h5>
+   <div class="d-flex justify-content-between">
+
+     <span>total</span><span> {{getTotalPrice() |currency}}</span>
+   </div>
+    <div class="d-flex justify-content-center mt-4">
+
+      <button type="button" class="btn btn-danger text-capitalize"
+      >process to checkout</button>
+    </div>
+
+  </div>
+</div>
+
+</div>
     </div>
   </div>
 </section>

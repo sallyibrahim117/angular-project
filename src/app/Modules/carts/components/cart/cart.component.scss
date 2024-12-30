@@ -3,7 +3,9 @@
   height: 100vh !important;
   }
   }
-
+section{
+  background-color: #d2c9ff;
+}
   .card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
   line-height: 2.15;
@@ -13,4 +15,8 @@
 
   .card-registration .select-arrow {
   top: 13px;
+  }
+  .cardtotal{
+
+    border: red 2px solid  !important;
   }

@@ -24,14 +24,15 @@
             <ng-container
             *ngIf="
               formControlls['email'].invalid &&
-              formControlls['email'].touched
+              formControlls['email'].touched&&
+              formControlls['email'].errors
             "
           >
             <small
               class="text-danger"
-      *ngIf="formControlls['email'].invalid && formControlls['email'].touched&& formControlls['errors']"
+      *ngIf="formControlls['email'].errors"
 
-              >Email is required
+              >Email or Phone is required
             </small>
             <small
             class="text-danger"
@@ -74,7 +75,8 @@
               <button
               type="submit"
               class="btn btn-danger w-75 logBtn mt-2 text-capitalize "
-            >
+
+              >
               log in
             </button>
             </div>

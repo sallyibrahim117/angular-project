@@ -71,14 +71,15 @@ class="text-danger"
         <ng-container
         *ngIf="
           formControlls['email'].invalid &&
-          formControlls['email'].touched
+          formControlls['email'].touched&&
+          formControlls['email'].errors
         "
       >
         <small
           class="text-danger"
-  *ngIf="formControlls['email'].invalid && formControlls['email'].touched&& formControlls['errors']"
+  *ngIf=" formControlls['email'].errors"
 
-          >Email is required
+          >Email or Phone is required
         </small>
         <small
         class="text-danger"
@@ -90,17 +91,22 @@ class="text-danger"
 
 
 
+
       <div class="w-100">
-        <button
+
+          <button
           type="submit"
-          class="btn btn-danger w-100 mt-2 text-capitalize"
+          class="btn btn-danger w-100 mt-2 text-capitalize "
           [routerLink]="['/auth/otpVerification']"
         >
-         forget password
+          send
         </button>
 
-      </div>
 
+        <!-- <a  class="text-danger logBtn"
+         >forget password?</a> -->
+
+      </div>
     </form>
   </div>
 

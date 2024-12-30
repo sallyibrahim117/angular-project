@@ -29,4 +29,7 @@ cartNumber=new BehaviorSubject<number>(0);
   addProduct(data:any):Observable<any>{
     return  this.http.post(`${environment.url}/products`,data)
    }
+   getLimitedPro():Observable<any>{
+    return this.http.get(`${environment.url}/products?limit=3`)
+  }
 }

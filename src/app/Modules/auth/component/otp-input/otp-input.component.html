@@ -1,0 +1,11 @@
+<input
+      #digit
+      *ngFor="let digit of digits; let i = index"
+      type="text"
+      inputmode="number"
+      [disabled]="disabled"
+      [value]="digit"
+      (keydown)="onInput(i, $event)"
+      (paste)="onPaste($event)"
+    />
+

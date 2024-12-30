@@ -13,11 +13,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
+import { Error404Component } from './Shared/error404/error404.component';
+import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './Modules/products/components/product/product.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
+    Error404Component,
+    HomeComponent,
 
   ],
   imports: [

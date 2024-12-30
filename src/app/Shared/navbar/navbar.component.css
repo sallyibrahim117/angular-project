@@ -1,0 +1,26 @@
+.dLine {
+  border-bottom: 1px dotted white;
+}
+
+.activelink {
+  border-bottom: 1px solid black;
+}
+
+.icon-tabler-search {
+  margin-left: -30px;
+}
+
+.searchInp {
+  border-radius: 0px;
+  background: #f3f0f0;
+  padding-right: 40px;
+  font-size: 13px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}/*# sourceMappingURL=navbar.component.css.map */

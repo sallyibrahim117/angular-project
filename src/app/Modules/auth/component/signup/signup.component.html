@@ -54,12 +54,13 @@
             <ng-container
             *ngIf="
               formControlls['email'].invalid &&
-              formControlls['email'].touched
+              formControlls['email'].touched&&
+              formControlls['email'].errors
             "
           >
             <small
               class="text-danger"
-      *ngIf="formControlls['email'].invalid && formControlls['email'].touched&& formControlls['errors']"
+      *ngIf="formControlls['email'].errors['required']"
 
               >Email is required
             </small>

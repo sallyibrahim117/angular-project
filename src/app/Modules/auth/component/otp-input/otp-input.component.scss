@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+input[type="text"] {
+  width: 2rem;
+  height: 2rem;
+  padding: calc(1ch / 1.5);
+  text-align: center;
+  border: 1px solid #545454;
+  border-radius: 2px;
+}
+
+input[type="text"]:not(:first-of-type) {
+  margin-left: calc(1ch / 2);
+}
+
+input[type="text"]:disabled {
+  opacity: 0.67;
+  background-color: rgba(0, 0, 0, 0.1);
+}

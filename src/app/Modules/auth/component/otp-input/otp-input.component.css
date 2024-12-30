@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+input[type=text] {
+  width: 2rem;
+  height: 2rem;
+  padding: 0.6666666667ch;
+  text-align: center;
+  border: 1px solid #545454;
+  border-radius: 2px;
+}
+
+input[type=text]:not(:first-of-type) {
+  margin-left: 0.5ch;
+}
+
+input[type=text]:disabled {
+  opacity: 0.67;
+  background-color: rgba(0, 0, 0, 0.1);
+}/*# sourceMappingURL=otp-input.component.css.map */

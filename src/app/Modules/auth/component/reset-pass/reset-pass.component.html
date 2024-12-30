@@ -1,0 +1,84 @@
+
+<div class="d-flex h-100 justify-content-center  flex-column ">
+  <div class="w-100">
+    <h4 class="fw-normal">Reset password</h4>
+  <small class="mb-1 details">we will reset your pass.</small>
+  </div>
+  <form id="reset" [formGroup]="myForm" (ngSubmit)="submit()">
+
+    <div>
+
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="New password"
+        formControlName="password"
+        [class.is-invalid]="
+        formControlls['password'].invalid && formControlls['password'].touched
+      "
+      />
+      <ng-container
+      *ngIf="
+        formControlls['password'].invalid &&
+        formControlls['password'].touched &&
+        formControlls['password'].errors
+      "
+    >
+      <small
+        class="text-danger"
+  *ngIf=" formControlls['password'].errors['required']"
+
+        >password is required
+      </small>
+      <small
+      class="text-danger"
+*ngIf=" formControlls['password'].errors['minlength']"
+
+      >password must be more than 6
+    </small>
+    </ng-container>
+    </div>
+    <div>
+
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        placeholder="confirm password"
+        formControlName="repeatPass"
+        [class.is-invalid]="
+        formControlls['repeatPass'].invalid && formControlls['repeatPass'].touched
+      "
+      />
+      <ng-container
+      *ngIf="
+        formControlls['repeatPass'].invalid &&
+        formControlls['repeatPass'].touched &&
+        formControlls['repeatPass'].errors
+      "
+    >
+      <small
+        class="text-danger"
+  *ngIf=" formControlls['repeatPass'].errors['required']"
+
+        >repeatPass is required
+      </small>
+      <small
+      class="text-danger"
+*ngIf=" formControlls['repeatPass'].errors['minlength']"
+
+      >password must be more than 6
+    </small>
+    </ng-container>
+    </div>
+
+    <button
+    type="submit"
+    class="btn btn-danger w-100 mt-2 text-capitalize"
+    [routerLink]="['/products/all-products']"
+  >
+   save
+  </button>
+  </form>
+  </div>

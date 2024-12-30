@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthComponent } from './auth.component';
 import { SignupComponent } from './component/signup/signup.component';
+import { ResetPassComponent } from './component/reset-pass/reset-pass.component';
 
 const routes: Routes = [{ path: '', component: AuthComponent ,
 children:[
@@ -14,6 +15,7 @@ children:[
     {path:"login",component:LoginComponent},
     {path:"subscribe",component:SubscribeComponent},
     {path:"otpVerification",component:OtpVerifyComponent},
+    {path:"resetPass",component:ResetPassComponent},
 
 ]}];
 

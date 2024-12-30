@@ -1,0 +1,61 @@
+.sidebar {
+  position: fixed;
+  top: 58px;
+  bottom: 0;
+  left: 92px;
+  padding: 30px 0 0; /* Height of navbar */
+  border-right: 1px solid #dee2e6;
+  z-index: 600;
+  padding-right: 34px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.content {
+  margin-top: 36px;
+  background-color: #000000;
+}
+.content .first-part {
+  padding-left: 30px !important;
+}
+.content .link {
+  position: relative;
+  font-size: 17px;
+}
+.content .link .link::after {
+  width: 75px;
+  height: 1px;
+  background: white;
+  position: absolute;
+  top: 23px;
+  content: "";
+  left: 0px;
+}
+.content .text {
+  font-size: 49px;
+}
+
+.hero .subject {
+  color: #DB4444;
+  position: relative;
+}
+.hero .subject .subject ::before {
+  width: 10px;
+  height: 14px;
+  background: #DB4444;
+  position: absolute;
+  content: "";
+  left: 0px;
+}/*# sourceMappingURL=home.component.css.map */

@@ -1,0 +1,95 @@
+.sidebar {
+  position: fixed;
+  top: 58px;;
+  bottom: 0;
+  left: 92px;
+  padding: 30px 0 0; /* Height of navbar */
+border-right: 1px solid #dee2e6;
+  z-index: 600;
+  padding-right: 34px;
+}
+ul{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+@media (max-width: 991.98px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+.content{
+  // margin-left: 200px;
+  margin-top: 36px;
+
+  background-color: #000000;
+  .first-part{
+    padding-left: 30px !important;
+  }
+  .link{
+    position: relative;
+    font-size: 17px;
+    .link::after{
+      width: 75px;
+      height: 1px;
+      background: white;
+      position: absolute;
+      top: 23px;
+      content: "";
+      left: 0px;
+
+    }
+  }
+  .text{
+    font-size: 49px;
+  }
+}
+
+.hero{
+
+  .subject{
+    color: #DB4444;
+    position: relative;
+    .subject ::before{
+      width: 10px;
+      height: 14px;
+      background: #DB4444;
+      position: absolute;
+
+      content: "";
+      left: 0px;
+
+    }
+  }
+
+}
+
+.descstyle{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.card-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+}
+.hidden-btn{
+  bottom: -40px1px;
+
+}
+.sec:hover .hidden-btn{
+display: block !important;
+}
+.tools{
+  right: 7px;
+    top: 11px;
+}
+.tools > span{
+  padding: 3px
+}

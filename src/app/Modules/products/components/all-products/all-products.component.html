@@ -13,7 +13,15 @@
 <div class="row gy-3 mt-4" *ngIf="!loading">
   <ng-container *ngFor="let item of product">
     <div class="col-lg-3 col-md-6 col-12">
-      <!-- <div class="card h-100">
+
+      <app-product [data]="item" (item)="addTocart($event)"></app-product>
+    </div>
+  </ng-container>
+</div>
+<div class="text-center" *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+ <!-- <div class="card h-100">
         <div class="card-img">
           <img [src]="item.image" class="card-img-top" alt="..." />
         </div>
@@ -28,10 +36,3 @@
           </div>
         </div>
       </div> -->
-      <app-product [data]="item" (item)="addTocart($event)"></app-product>
-    </div>
-  </ng-container>
-</div>
-<div class="text-center" *ngIf="loading">
-  <app-spinner></app-spinner>
-</div>
