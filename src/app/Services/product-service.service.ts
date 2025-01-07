@@ -30,6 +30,6 @@ cartNumber=new BehaviorSubject<number>(0);
     return  this.http.post(`${environment.url}/products`,data)
    }
    getLimitedPro():Observable<any>{
-    return this.http.get(`${environment.url}/products?limit=3`)
+    return this.http.get(`${environment.url}/products?limit=4`)
   }
 }

@@ -1,15 +1,18 @@
 .sidebar {
-  position: fixed;
+
   top: 58px;;
   bottom: 0;
-  left: 92px;
+  // left: 92px;
   padding: 30px 0 0; /* Height of navbar */
 border-right: 1px solid #dee2e6;
   z-index: 600;
-  padding-right: 34px;
+
+  height: 420px;
 }
 ul{
   list-style-type: none;
+  padding: 0px;
+  margin: 0px;
 }
 
 a{

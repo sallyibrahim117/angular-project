@@ -2,7 +2,7 @@
   <div class="col-2">
     <div id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
       <div class="position-sticky">
-        <ul class="m-0" (change)="filterCategory($event)">
+        <ul (change)="filterCategory($event)">
           <ng-container *ngFor="let item of myCategory">
             <li class="pb-4">
               <a href="" class="text-capitalize">{{ item }}</a>
@@ -68,11 +68,12 @@
         </div>
       </div>
     </div>
+    </div>
     <div class="mt-3 hero">
       <h4 class="subject text-capitalize">today's</h4>
       <div class="row gy-3 mt-4" *ngIf="!loading">
         <ng-container *ngFor="let item of product">
-          <div class="col-lg-4 col-md-6 col-12">
+          <div class="col-lg-3 col-md-6 col-12">
             <!-- <app-product [data]="item" (item)="addTocart($event)"></app-product> -->
             <div class="card h-100">
               <div class="position-relative">
@@ -154,5 +155,5 @@
         >view all products</button>
       </div>
     </div>
-  </div>
+
 </div>
